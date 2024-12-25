@@ -23,8 +23,6 @@ function closeMenuOnClickOutside(event) {
   }
 }
 
-
-
 // Scroll to Section
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
@@ -67,7 +65,7 @@ function toggleCard(card) {
 
  // Handle confirmation
  confirmBtn.addEventListener('click', () => {
-     window.location.href = 'https://raw.githubusercontent.com/FloxGust/Resume/main/Thanathon-Satthayaphan-Resume.pdf';
+     window.location.href = 'https://raw.githubusercontent.com//Resume/main/Resume.pdf';
      popover.style.display = 'none';
      overlay.style.display = 'none';
  });
