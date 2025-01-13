@@ -2,460 +2,594 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="src\image\Logo\icons8-machine-learning-96.png">
-    <title>Thanathon Satt - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/14b493bb26.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanathon Satt - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.navbar');
+      const hamburger = document.getElementById('hamburger-menu');
+
+      // Toggle visibility of the menu
+      navLinks.classList.toggle('show');
+      hamburger.textContent = navLinks.classList.contains('show') ? '⛌' : '☰';
+
+      // Add event listener to close menu on outside click
+      document.addEventListener('click', closeMenuOnClickOutside);
+    }
+
+    function closeMenuOnClickOutside(event) {
+      const navLinks = document.querySelector('.navbar');
+      const hamburger = document.getElementById('hamburger-menu');
+
+      if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+        navLinks.classList.remove('show');
+        hamburger.textContent = '☰';
+        document.removeEventListener('click', closeMenuOnClickOutside);
+      }
+    }
+
+  </script>
+
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar sticky">
-        <div class="logo" style="font-family:Fredericka the Great, serif; font-weight: 400; font-size:20px;">TS</div>
-        <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">☰</div>
-
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a target="_blank" href="https://raw.githubusercontent.com/FloxGust/Resume/main/Thanathon-Satthayaphan-Resume.pdf">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header>
+    <h1>TS</h1>
+    <nav>
+      <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">☰</div>
+      <ul class="navbar nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="profile">
-                <img src="src\image\image56.jpg" alt="Thanathon Satthayaphan">
-                <div>
-                    <h1>Thanathon Satthayaphan</h1>
-                    <p>AI & Data Scientist</p>
-                </div>
-            </div>
+  </header>
+
+  <section id="home" class="home">
+    <div class="profile">
+      <img src="src\image\image53.png" alt="Thanathon Satthayaphan">
+      <div>
+        <h2>Thanathon Satthayaphan <br>AI & Data Scientist</h2>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>
+        Hi, I am Thanathon Satthayaphan. My nickname is Fias, and I am 21 years old.
+        I am pursuing a major in Artificial Intelligence Engineering and Data Science in 3rd year.
+        I excel at socializing, understanding people, and collaborating effectively in a team.
+        With a passion for continuous learning, I specialize in machine learning, data analytics, and data
+        mining.
+      </p><br>
+    </div>
+    <p>You can Download!</p>
+    <div class="download-btn">
+      <a target="_blank"
+        href="https://raw.githubusercontent.com/FloxGust/Resume/main/Thanathon-Satthayaphan-Resume.pdf">
+        My Resume</a>
+      <a target="_blank" href="https://raw.githubusercontent.com/FloxGust/Resume/main/Transcript.pdf">
+        My Transcript</a>
+    </div>
+  </section>
+
+
+  <section id="education" class="education">
+    <h2>Education</h2>
+
+
+
+    <div class="education-img">
+      <img src="src\image\Logo\Sarasas.jpg" alt="Bangkok University Logo">
+    </div>
+    <div class="education-container">
+      <div class="education-info">
+        <h3>Sarasas Witaed Nakhonpathom <a target="_blank" href="https://www.bu.ac.th/th">Click to Visit◥</a></h3>
+        <p>2019 - 2022</p>
+      </div>
+      <div class="education-info">
+        <h4>Two Languages Sciences and Mathematics Program.</h4>
+        <p>High School</p>
+      </div>
+      <div class="education-info">
+
+      </div>
+    </div>
+    <div class="education-img">
+      <img src="src\image\Logo\The Bournemouth.jpg" alt="Bangkok University Logo">
+    </div>
+    <div class="education-container">
+      <div class="education-info">
+        <h3>The Bournemouth School of English <a target="_blank" href="https://www.bu.ac.th/th">Click to Visit◥</a></h3>
+        <p>2019</p>
+      </div>
+      <div class="education-info">
+        <h4>A short course for UK boarding school pupils.</h4>
+        <p>School Holidays</p>
+      </div>
+      <div class="education-info">
+
+      </div>
+    </div>
+    <div class="education-img">
+      <img src="src\image\Logo\BU.jpg" alt="Bangkok University Logo">
+    </div>
+    <div class="education-container">
+      <div class="education-info">
+        <h3>Bangkok University <a target="_blank" href="https://www.bu.ac.th/th">Click to Visit◥</a></h3>
+        <p>2022 - Present</p>
+      </div>
+      <div class="education-info">
+        <h4>Engineering - Artificial Intelligence and Data Science.</h4>
+        <p>Bachelor's Degree</p>
+      </div>
+      <div class="education-info">
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section id="experience" class="experience">
+    <h2>Experience & Projects</h2>
+    <div class="project-container">
+      <div class="project-block">
+        <div class="project-img">
+          <div class="slider">
+            <img src="src\image\Openhouse\image23.jpg" class="active">
+            <img src="src\image\Openhouse\image54.jpg">
+            <img src="src\image\Openhouse\image75.jpg">
+            <img src="src\image\Openhouse\image44.jpg">
+
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
         </div>
-    </header>
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                Hi, I am Thanathon Satthayaphan. My nickname is Fias, and I am 21 years old.
-                I am pursuing a major in Artificial Intelligence Engineering and Data Science in 3rd year.
-                I excel at socializing, understanding people, and collaborating effectively in a team.
-                With a passion for continuous learning, I specialize in machine learning, data analytics, and data
-                mining.
-            </p>
-            <!-- Resume Download Button -->
-            <div class="about-btn">
-                <a target="_blank"
-                    href="https://raw.githubusercontent.com/FloxGust/Resume/main/Thanathon-Satthayaphan-Resume.pdf">Download
-                    My Resume</a>
-                <a target="_blank"
-                    href="https://raw.githubusercontent.com/FloxGust/Resume/main/Transcript.pdf">Download
-                    My Transcript</a>
-            </div>
+        <div class="project-card">
+          <div>
+            <h3>Guest who by AI ROBOT</h3>
+            <p>Aug 2024</p>
+          </div>
+          <p>ㆍIntegrated KUKA robotic arm for BU Open House 2024. Focused on the integration of a KUKA robotic arm with
+            advanced capabilities such as data collection, machine learning-based training, speech-to-text interaction,
+            and object detection. The setup demonstrates how robotics, AI, and automation can work together to create an
+            interactive and intelligent system. <br>
+            This project aims to use interactiive with users to challenge Ai models that respond to both sound and
+            images. The AI ​​robot arm will receive voice commands from the user and will pick up the object box cartoon
+            that the user Use hints for the characteristics of that Charator.</p>
         </div>
-    </section>
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <a target="_blank" href="https://www.facebook.com/Sarasas.Nakhonpathom">
-                <img src="src\image\Logo\Sarasas.jpg" alt="Sarasas Witaed Nakhonpathom"></a>
-            <div class="education-head">
-                <p><strong>Sarasas Witaed Nakhonpathom</strong></p>
-                <p><strong>2019 - 2022</strong></p>
-            </div>
-            <p>High School Two Languages Sciences and Mathematics Program.</p>
-            <a target="_blank" href="https://www.facebook.com/thebournemouthschoolofenglish">
-                <img src="src\image\Logo\The Bournemouth.jpg" alt="The Bournemouth School of English"></a>
-            <div class="education-head">
-                <p><strong>The Bournemouth School of English   </strong></p>
-                <p><strong>2019</strong></p>
-            </div>
-            <p>School Holidays: A short course for UK boarding school pupils.</p>
-            <a target="_blank"
-                href="https://www.bu.ac.th/th?utm_source=BGSEM&utm_medium=GoogleSEM&utm_campaign=bgleadgen24&utm_term=bangkok%20university&gad_source=1&gclid=CjwKCAiA65m7BhAwEiwAAgu4JEYxwGrnqhWYBqDj4IlmJMjW8FAQkWrBa1dXtxc7lKsH-mJqOuN25xoCQm0QAvD_BwE">
-                <img class="logo-bu" src="src\image\Logo\BU.jpg" alt="Bangkok University"></a>
-            <div class="education-head">
-                <p><strong>Bangkok University</strong></p>
-                <p><strong>2022 - Present</strong></p>
-            </div>
-            <p>Bachelor's Degree in Engineering Artificial Intelligence and Data Science.</p>
+      </div>
+
+      <div class="project-block">
+        <div class="project-img">
+          <div class="slider">
+            <img src="src\image\amity\IMG_6634.JPG" class="active">
+            <img src="src\image\amity\image.jpg">
+            <img src="src\image\amity\IMG_6616.JPG">
+            <img src="src\image\amity\IMG_6627.JPG">
+            <img src="src\image\amity\IMG_6629.JPG">
+            <img src="src\image\amity\IMG_6625.JPG">
+            <img src="src\image\amity\IMG_6631.JPG">
+
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
         </div>
-    </section>
-    <section id="experience">
-        <div class="container">
-            <h2>Experience & Projects</h2>
-            <div class="experience-item">
-                <h3><br>KUKA Project - Guess Who by AI Robot</h3>
-                <div class="carousel" id="carouselKUKA">
-                    <div class="carousel-inner">
-                        <img src="src\image\Openhouse\image23.jpg">
-                        <img src="src\image\Openhouse\image54.jpg">
-                        <img src="src\image\Openhouse\image75.jpg">
-                        <img src="src\image\Openhouse\image44.jpg">
-                    </div>
-                    <button class="carousel-btn prev" onclick="moveSlide('carouselKUKA', -1)">&#10094;</button>
-                    <button class="carousel-btn next" onclick="moveSlide('carouselKUKA', 1)">&#10095;</button>
-                </div>
-                <p>Integrated KUKA robotic arm for BU Open House 2024. Focused on the integration of a KUKA robotic arm with advanced capabilities such as data collection, machine learning-based training, speech-to-text interaction, and object detection. The setup demonstrates how robotics, AI, and automation can work together to create an interactive and intelligent system. <br>
-                    This project aims to use interactiive with users to challenge Ai models that respond to both sound and images. The AI ​​robot arm will receive voice commands from the user and will pick up the object box cartoon that the user Use hints for the characteristics of that Charator.
-                </p>
-                <a href="https://github.com/FloxGust/KUKA-BU-OpenHouse2024">See on GitHub ⤷</a>
-            </div>
-
-            <!-- Amity Hackathon -->
-            <div class="experience-item">
-                <h3><br><br>Amity Hackathon 2023</h3>
-                <div class="carousel" id="carouselAmity">
-                    <div class="carousel-inner">
-                        <img src="src\image\amity\IMG_6634.JPG">
-                        <img src="src\image\amity\image.jpg">
-                        <img src="src\image\amity\IMG_6616.JPG">
-                        <img src="src\image\amity\IMG_6627.JPG">
-                        <img src="src\image\amity\IMG_6629.JPG">
-                        <img src="src\image\amity\IMG_6625.JPG">
-                        <img src="src\image\amity\IMG_6631.JPG">
-                    </div>
-                    <button class="carousel-btn prev" onclick="moveSlide('carouselAmity', -1)">&#10094;</button>
-                    <button class="carousel-btn next" onclick="moveSlide('carouselAmity', 1)">&#10095;</button>
-                </div>
-                <p>Our team advanced to the finals of the Amity Hackathon 2023, where we developed a ChatGPT-based chatbot application with integrated frontend design and API features. The app promotes environmental awareness by using ChatGPT and DALL-E to engage users in conversations about conservation. It also includes a community platform for users to interact and a marketplace for selling products and services. Additionally, the app provides real-time weather updates, helping users stay informed about environmental conditions. This initiative aims to educate and empower society to adopt sustainable practices.</p>
-
-            </div>
-            <!-- Bitcoin Prediction -->
-            <div class="experience-item">
-                <h3><br><br>Bitcoin Prediction Project</h3>
-                <div class="carousel" id="carouselBitcoin">
-                    <div class="carousel-inner">
-                        <img src="src\image\Bitcoin\1.png">
-                        <img src="src\image\Bitcoin\2.png">
-                        <img src="src\image\Bitcoin\3.png">
-                        <img src="src\image\Bitcoin\4.png">
-                        <img src="src\image\Bitcoin\5.png">
-                        <img src="src\image\Bitcoin\6.png">
-                        <img src="src\image\Bitcoin\7.png">
-                        <img src="src\image\Bitcoin\8.png">
-                        <img src="src\image\Bitcoin\9.png">
-                        <img src="src\image\Bitcoin\10.png">
-                        <img src="src\image\Bitcoin\11.png">
-                        <img src="src\image\Bitcoin\12.png">
-                        <img src="src\image\Bitcoin\13.png">
-                        <img src="src\image\Bitcoin\15.png">
-                    </div>
-                    <button class="carousel-btn prev" onclick="moveSlide('carouselBitcoin', -1)">&#10094;</button>
-                    <button class="carousel-btn next" onclick="moveSlide('carouselBitcoin', 1)">&#10095;</button>
-                </div>
-                <p>This project involved building a Bitcoin price prediction program by focusing on data preparation, model training with selected algorithms, and performance evaluation to deliver accurate and reliable predictions. <br>
-                    <br><strong>Model Accuracy:</strong> Achieved high accuracy with LSTM for short-term predictions.
-                        Random-Forest performed well for medium-term forecasts with feature-rich datasets.<br><br>
-                    <strong>Visualization:</strong> Clear visualizations of Bitcoin price trends, technical indicators, and prediction outputs.<br><br>
-                    <strong>Business Applications:</strong> Helps traders identify trends and make informed decisions.
-                        Can be adapted for real-time prediction with minor modifications.<br><br>
-                
-                This program serves as a practical application of machine learning for time-series forecasting and showcases the importance of robust data preparation and model evaluation in predictive analytics.
-                </p>
-                <a href="https://github.com/FloxGust">See on GitHub ⤷</a>
-            </div>
-            <div class="experience-item">
-                <h3><br><br>Line Officials Account and Chat-bot</h3>
-                <div class="carousel" id="carouselLineOA">
-                    <div class="carousel-inner">
-                        <img src="src\image\RoadTrippy 2023\1.png">
-                        <img src="src\image\RoadTrippy 2023\3.png">
-                        <img src="src\image\RoadTrippy 2023\4.png">
-                        <img src="src\image\RoadTrippy 2023\5.png">
-                        <img src="src\image\RoadTrippy 2023\6.png">
-                        <img src="src\image\RoadTrippy 2023\8.png">
-                    </div>
-                    <button class="carousel-btn prev" onclick="moveSlide('carouselLineOA', -1)">&#10094;</button>
-                    <button class="carousel-btn next" onclick="moveSlide('carouselLineOA', 1)">&#10095;</button>
-                </div>
-                <p>This project integrates a LINE Official Account with a Travel Booking Web Application and connects Chat-GPT APIs to provide interactive travel-related services. Users can browse, book travel packages, and get their travel questions answered through an intuitive chatbot system. <br>This integration creates an innovative and user-friendly platform, merging LINE's communication reach with AI-driven interactions and a robust travel booking system. Perfect for modern travelers!</p>
-            </div>
-            <div class="experience-item">
-                <h3><br><br>Teaching Assistant(TA) BU Open House 2022-2023</h3>
-                <div class="carousel" id="carouselTA">
-                    <div class="carousel-inner">
-                        <img src="src\image\TA\TA1.jpg">
-                        <img src="src\image\TA\TA2.jpg">
-                        <img src="src\image\TA\TA3.JPG">
-                        <img src="src\image\TA\TA4.jpg">
-                        <img src="src\image\TA\TA5.jpg">
-                        <img src="src\image\TA\TA6.jpg">
-                        <img src="src\image\TA\TA7.JPG">
-                        <img src="src\image\TA\TA8.jpg">
-                        <img src="src\image\TA\TA9.jpg">
-                        <img src="src\image\TA\TA10.jpg">
-                        <img src="src\image\TA\TA11.jpg">
-                        
-                    </div>
-                    <button class="carousel-btn prev" onclick="moveSlide('carouselTA', -1)">&#10094;</button>
-                    <button class="carousel-btn next" onclick="moveSlide('carouselTA', 1)">&#10095;</button>
-                </div>
-                <p><strong>Teaching Assistant BU Open House 2023</strong> <br>Train participants on how to use Tableau to analyze the data received. For each format and problem, create a dashborad summarizing the results of your work. <br>Tableau is a powerful data visualization and analytics tool that helps transform raw data into interactive dashboards and insightful visualizations. It is widely used in industries to analyze and summarize complex datasets for better decision-making.</p>
-                <p><strong>Teaching Assistant BU Open House 2022</strong> <br>Train participants on how to use Makey Makey Kits. It is an easy-to-use invention kit that allows anyone to turn everyday objects into touch-sensitive input devices, such as keyboards or game controllers. It bridges creativity, technology, and basic electronics in a fun and interactive way. <br>Booth demonstrates how Augmented Reality (AR) can be used to bring 3D models to life using Unity, a powerful game development platform. Participants will learn how AR integrates digital content into the real world, enabling interactive and immersive experiences.</p>
-            </div>
+        <div class="project-card">
+          <div>
+            <h3>Amity Hackathon 2023</h3>
+            <p>March 2023</p>
+          </div>
+          <p>ㆍOur team advanced to the finals of the Amity Hackathon 2023, where we developed a ChatGPT-based chatbot
+            application with integrated frontend design and API features. The app promotes environmental awareness by
+            using ChatGPT and DALL-E to engage users in conversations about conservation. It also includes a community
+            platform for users to interact and a marketplace for selling products and services. Additionally, the app
+            provides real-time weather updates, helping users stay informed about environmental conditions. This
+            initiative aims to educate and empower society to adopt sustainable practices.</p>
         </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Capabilities & Skills <br>
-                <p style="font-weight: 200; font-size:small; color:rgb(158, 158, 158); margin:5px 0">Click on the icon to view details.</p>
-            </h2>
-            <h4></h4>
-            <div class="skill-block">
+      </div>
 
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="src\image\Logo\Python-Symbol.png" alt="Python Logo">
-                    </div>
-                    <div class="back">
-                        <p>Proficient in Python libraries like Matplotlib, Pandas, OpenCV, etc. Understanding Data structure and Algorithms.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://analyticstraininghub.com/wp-content/uploads/2020/10/icon-tableau.png"
-                            alt="Tebleau Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience in building dashboards, creating interactive data visualizations, and using
-                            Tableau for data storytelling and analysis.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/looker-tj29ynkm6d8d8ep7un7d9.png/looker-9pk6hzktapkc9fyd9b0j.png?_a=DAJFJtWIZAAC"
-                            alt="Looker Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience with Looker’s modeling language (LookML), creating custom reports, and building
-                            scalable data visualizations.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://cdn.prod.website-files.com/61a1122d4f5629ccdeb44eee/624258ed4a33c9b161158aa2_Palo%20Alto%20Log.png"
-                            alt="Palo alto Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience in Palo Alto’s cybersecurity tools, including network security, firewall
-                            management, and foundational cloud security principles.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png"
-                            alt="Google Cloud Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience in Google Cloud services, including Compute Engine, Cloud Storage, BigQuery, and
-                            building scalable cloud solutions.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://static-00.iconduck.com/assets.00/sql-database-generic-icon-1521x2048-d0vdpxpg.png"
-                            alt="SQL Logo">
-                    </div>
-                    <div class="back">
-                        <p>Proficient in writing complex SQL queries for data extraction, manipulation, and database
-                            management. Understanding of joins, subqueries, and optimizations.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://static-00.iconduck.com/assets.00/docker-icon-2048x1753-uguk29a7.png"
-                            alt="Docker Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience in creating and managing containers, building Docker images, and deploying
-                            scalable applications using Docker.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPLXqRyw5PEl4ETnuzYuP5XhUI51sUdQzcg&s"
-                            alt="MySQL Logo">
-                    </div>
-                    <div class="back">
-                        <p>Skilled in designing, managing, and optimizing MySQL databases, with a strong understanding
-                            of relational database concepts.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/334671144/VY/QJ/XC/59100356/download.png"
-                            alt="IBM SPSS Logo">
-                    </div>
-                    <div class="back">
-                        <p>Skilled in statistical analysis, data modeling, and predictive analytics using IBM SPSS.
-                            Strong understanding of survey data processing.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://blog.greggant.com/images/posts/2019-04-25-figma/Figma.png" alt="Figma Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience in designing user interfaces, prototyping, and collaborative UI/UX workflows using
-                            Figma.</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML Logo">
-                    </div>
-                    <div class="back">
-                        <p>Strong foundation in HTML5, creating structured and semantic web pages for modern web
-                            development.</p>
-                    </div>
-                </div>
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
-                            alt="CSS Logo">
-                    </div>
-                    <div class="back">
-                        <p>Proficient in CSS3 for styling web pages, responsive design, animations, and cross-browser
-                            compatibility.</p>
-                    </div>
-                </div>
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://wildcardcorp.com/image-repository/javascript-icon.png/@@images/image.png"
-                            alt="Javascript Logo">
-                    </div>
-                    <div class="back">
-                        <p>Skilled in JavaScript for creating dynamic, interactive web applications.</p>
-                    </div>
-                </div>
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png"
-                            alt="React Logo">
-                    </div>
-                    <div class="back">
-                        <p>Skilled in building single-page applications using React.</p>
-                    </div>
-                </div>
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ-PAFsm5avHuWl8FrI_CUAQa0ikC6esaEJQ&s"
-                            alt="Rails Logo">
-                    </div>
-                    <div class="back">
-                        <p>Building scalable web applications with Ruby on Rails, focusing on MVC architecture and
-                            RESTful APIs.</p>
-                    </div>
-                </div>
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="https://www.nesabamedia.com/wp-content/uploads/2021/10/FreeCAD-Logo-1.png"
-                            alt="FreeCad Logo">
-                    </div>
-                    <div class="back">
-                        <p>Experience in 3D modeling and designing using FreeCAD, with knowledge of parametric design
-                            workflows</p>
-                    </div>
-                </div>
-
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="src\image\Logo\roboflow.png" alt="Roboflow Logo">
-                    </div>
-                    <div class="back">
-                        <p>Skilled in using Roboflow for computer vision workflows, dataset preprocessing, and creating
-                            machine learning-ready datasets.</p>
-                    </div>
-                </div>
-                <div class="skill-card" onclick="toggleCard(this)">
-                    <div class="front">
-                        <img src="src\image\Logo\Adobe-Logo.png" alt="Adobe Logo">
-                    </div>
-                    <div class="back">
-                        <p>Proficient in photo editing, graphic design, and video editing using Adobe Photoshop and
-                            Premiere Pro</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="soft-skills">
-                <div class="soft-skills">
-                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/critical-thinking.png"
-                        alt="critical-thinking" />
-                    <div class="description">Critical Thinking</div>
-                </div>
-                <div class="soft-skills">
-                    <img width="50" height="50"
-                        src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/external-problem-solving-business-administration-wanicon-lineal-wanicon.png"
-                        alt="external-problem-solving-business-administration-wanicon-lineal-wanicon" />
-                    <div class="description">Problem Solving</div>
-                </div>
-                <div class="soft-skills">
-                    <img width="50" height="50"
-                        src="https://img.icons8.com/ios-filled/50/creativity-and-resourcefulness.png"
-                        alt="creativity-and-resourcefulness" />
-                    <div class="description">Creativity</div>
-                </div>
-                <div class="soft-skills">
-                    <img width="50" height="50"
-                        src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/64/external-growth-mindset-creative-thinking-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"
-                        alt="external-growth-mindset-creative-thinking-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto" />
-                    <div class="description">Growth Mindset</div>
-                </div>
-                <div class="soft-skills">
-                    <img width="50" height="50" src="https://img.icons8.com/wired/64/presentation.png"
-                        alt="presentation" />
-                    <div class="description">Presentation</div>
-                </div>
-                <div class="soft-skills">
-                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/teaching.png"
-                        alt="teaching" />
-                    <div class="description">Learning Skills</div>
-                </div>
-                <div class="soft-skills">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/collaboration.png"
-                        alt="collaboration" />
-                    <div class="description">Communication</div>
-                </div>
-            </div>
+      <div class="project-block">
+        <div class="project-img">
+          <div class="slider">
+            <img src="src\image\TA\TA1.jpg" class="active">
+            <img src="src\image\TA\TA2.jpg">
+            <img src="src\image\TA\TA3.JPG">
+            <img src="src\image\TA\TA4.jpg">
+            <img src="src\image\TA\TA5.jpg">
+            <img src="src\image\TA\TA6.jpg">
+            <img src="src\image\TA\TA7.JPG">
+            <img src="src\image\TA\TA8.jpg">
+            <img src="src\image\TA\TA9.jpg">
+            <img src="src\image\TA\TA10.jpg">
+            <img src="src\image\TA\TA11.jpg">
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <p>Contact<a href="mailto:thanathon.satt@gmail.com">thanathon.satt@gmail.com</a></p>
-            <p>
-                Tel: +66 957124955 |
-                <a href="https://linkedin.com/in/thanathon-satt" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/FloxGust" target="_blank">GitHub</a>
-            </p>
-            <p>&copy; 2024 Thanathon Satt</p>
+        <div class="project-card">
+          <div>
+            <h3>Teaching Assistant(TA) BU Open House</h3>
+            <p>2022 & 2023</p>
+          </div>
+          <p><strong>Teaching Assistant BU Open House 2023</strong> <br>Train participants on how to use Tableau to
+            analyze the data received. For each format and problem, create a dashborad summarizing the results of your
+            work. <br>Tableau is a powerful data visualization and analytics tool that helps transform raw data into
+            interactive dashboards and insightful visualizations. It is widely used in industries to analyze and
+            summarize complex datasets for better decision-making.</p>
+          <br>
+          <p><strong>Teaching Assistant BU Open House 2022</strong> <br>Train participants on how to use Makey Makey
+            Kits. It is an easy-to-use invention kit that allows anyone to turn everyday objects into touch-sensitive
+            input devices, such as keyboards or game controllers. It bridges creativity, technology, and basic
+            electronics in a fun and interactive way. <br>Booth demonstrates how Augmented Reality (AR) can be used to
+            bring 3D models to life using Unity, a powerful game development platform. Participants will learn how AR
+            integrates digital content into the real world, enabling interactive and immersive experiences.</p>
         </div>
-    </footer>
+      </div>
+
+    </div>
+    <div class="project-block">
+      <div class="project-img">
+        <div class="slider">
+          <img src="src\image\Bitcoin\1.png" class="active">
+          <img src="src\image\Bitcoin\2.png">
+          <img src="src\image\Bitcoin\3.png">
+          <img src="src\image\Bitcoin\4.png">
+          <img src="src\image\Bitcoin\5.png">
+          <img src="src\image\Bitcoin\6.png">
+          <img src="src\image\Bitcoin\7.png">
+          <img src="src\image\Bitcoin\8.png">
+          <img src="src\image\Bitcoin\9.png">
+          <img src="src\image\Bitcoin\10.png">
+          <img src="src\image\Bitcoin\11.png">
+          <img src="src\image\Bitcoin\12.png">
+          <img src="src\image\Bitcoin\13.png">
+          <img src="src\image\Bitcoin\15.png">
+
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="project-card">
+        <div>
+          <h3>Machine Learning Project: Bitcoin Price Prediction</h3>
+          <p>May 2024</p>
+        </div>
+        <p>ㆍDeveloped machine learning models (Linear Regression, Random Forest, Gradient Boosting) to
+          predict Bitcoin
+          closing prices. Preprocessed data, evaluated performance (MSE, R'), and visualzed results using
+          Python, Pandas,
+          Scikit-learn, and Matplotlib.<br><strong>Model Accuracy:</strong> Achieved high accuracy with LSTM for
+          short-term predictions.
+          Random-Forest performed well for medium-term forecasts with feature-rich datasets.<br><br>
+          <strong>Visualization:</strong> Clear visualizations of Bitcoin price trends, technical indicators, and
+          prediction outputs.<br><br>
+          <strong>Business Applications:</strong> Helps traders identify trends and make informed decisions.
+          Can be adapted for real-time prediction with minor modifications.<br><br>
+        </p>
+      </div>
+    </div>
+
+    <div class="project-container">
+      <div class="project-block">
+        <div class="project-img">
+          <div class="slider">
+            <img src="src\image\RoadTrippy 2023\1.png" class="active">
+            <img src="src\image\RoadTrippy 2023\3.png">
+            <img src="src\image\RoadTrippy 2023\4.png">
+            <img src="src\image\RoadTrippy 2023\5.png">
+            <img src="src\image\RoadTrippy 2023\6.png">
+            <img src="src\image\RoadTrippy 2023\8.png">
+
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
+        <div class="project-card">
+          <div>
+            <h3>Line Officials Account and Chat-bot Project</h3>
+            <p>Nov 2023</p>
+          </div>
+          <p>ㆍThis project integrates a LINE Official Account with a Travel Booking Web Application and connects
+            Chat-GPT APIs to provide interactive travel-related services. Users can browse, book travel packages, and
+            get their travel questions answered through an intuitive chatbot system. <br>This integration creates an
+            innovative and user-friendly platform, merging LINE's communication reach with AI-driven interactions and a
+            robust travel booking system. Perfect for modern travelers!</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+  <section id="skills" class="skills">
+    <h2>Capabilities & Skills</h2>
+    <p style="font-weight: 200; font-size:small; color:rgb(158, 158, 158); margin:5px 0">Click on the icon to view
+      details.</p>
+    <div class="skills-container">
+      <div class="skill-block">
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="src\image\Logo\Python-Symbol.png" alt="Python Logo">
+          </div>
+          <div class="back">
+            <p>Proficient in Python libraries like Matplotlib, Pandas, OpenCV, etc. Understanding Data structure and
+              Algorithms.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://analyticstraininghub.com/wp-content/uploads/2020/10/icon-tableau.png" alt="Tebleau Logo">
+          </div>
+          <div class="back">
+            <p>Experience in building dashboards, creating interactive data visualizations, and using
+              Tableau for data storytelling and analysis.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img
+              src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/looker-tj29ynkm6d8d8ep7un7d9.png/looker-9pk6hzktapkc9fyd9b0j.png?_a=DAJFJtWIZAAC"
+              alt="Looker Logo">
+          </div>
+          <div class="back">
+            <p>Experience with Looker’s modeling language (LookML), creating custom reports, and building
+              scalable data visualizations.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img
+              src="https://cdn.prod.website-files.com/61a1122d4f5629ccdeb44eee/624258ed4a33c9b161158aa2_Palo%20Alto%20Log.png"
+              alt="Palo alto Logo">
+          </div>
+          <div class="back">
+            <p>Experience in Palo Alto’s cybersecurity tools, including network security, firewall
+              management, and foundational cloud security principles.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png"
+              alt="Google Cloud Logo">
+          </div>
+          <div class="back">
+            <p>Experience in Google Cloud services, including Compute Engine, Cloud Storage, BigQuery, and
+              building scalable cloud solutions.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://static-00.iconduck.com/assets.00/sql-database-generic-icon-1521x2048-d0vdpxpg.png"
+              alt="SQL Logo">
+          </div>
+          <div class="back">
+            <p>Proficient in writing complex SQL queries for data extraction, manipulation, and database
+              management. Understanding of joins, subqueries, and optimizations.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://static-00.iconduck.com/assets.00/docker-icon-2048x1753-uguk29a7.png" alt="Docker Logo">
+          </div>
+          <div class="back">
+            <p>Experience in creating and managing containers, building Docker images, and deploying
+              scalable applications using Docker.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPLXqRyw5PEl4ETnuzYuP5XhUI51sUdQzcg&s"
+              alt="MySQL Logo">
+          </div>
+          <div class="back">
+            <p>Skilled in designing, managing, and optimizing MySQL databases, with a strong understanding
+              of relational database concepts.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/334671144/VY/QJ/XC/59100356/download.png"
+              alt="IBM SPSS Logo">
+          </div>
+          <div class="back">
+            <p>Skilled in statistical analysis, data modeling, and predictive analytics using IBM SPSS.
+              Strong understanding of survey data processing.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://blog.greggant.com/images/posts/2019-04-25-figma/Figma.png" alt="Figma Logo">
+          </div>
+          <div class="back">
+            <p>Experience in designing user interfaces, prototyping, and collaborative UI/UX workflows using
+              Figma.</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML Logo">
+          </div>
+          <div class="back">
+            <p>Strong foundation in HTML5, creating structured and semantic web pages for modern web
+              development.</p>
+          </div>
+        </div>
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png" alt="CSS Logo">
+          </div>
+          <div class="back">
+            <p>Proficient in CSS3 for styling web pages, responsive design, animations, and cross-browser
+              compatibility.</p>
+          </div>
+        </div>
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://wildcardcorp.com/image-repository/javascript-icon.png/@@images/image.png"
+              alt="Javascript Logo">
+          </div>
+          <div class="back">
+            <p>Skilled in JavaScript for creating dynamic, interactive web applications.</p>
+          </div>
+        </div>
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png"
+              alt="React Logo">
+          </div>
+          <div class="back">
+            <p>Skilled in building single-page applications using React.</p>
+          </div>
+        </div>
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ-PAFsm5avHuWl8FrI_CUAQa0ikC6esaEJQ&s"
+              alt="Rails Logo">
+          </div>
+          <div class="back">
+            <p>Building scalable web applications with Ruby on Rails, focusing on MVC architecture and
+              RESTful APIs.</p>
+          </div>
+        </div>
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="https://www.nesabamedia.com/wp-content/uploads/2021/10/FreeCAD-Logo-1.png" alt="FreeCad Logo">
+          </div>
+          <div class="back">
+            <p>Experience in 3D modeling and designing using FreeCAD, with knowledge of parametric design
+              workflows</p>
+          </div>
+        </div>
+
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="src\image\Logo\roboflow.png" alt="Roboflow Logo">
+          </div>
+          <div class="back">
+            <p>Skilled in using Roboflow for computer vision workflows, dataset preprocessing, and creating
+              machine learning-ready datasets.</p>
+          </div>
+        </div>
+        <div class="skill-card" onclick="toggleCard(this)">
+          <div class="front">
+            <img src="src\image\Logo\Adobe-Logo.png" alt="Adobe Logo">
+          </div>
+          <div class="back">
+            <p>Proficient in photo editing, graphic design, and video editing using Adobe Photoshop and
+              Premiere Pro</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="soft-skills">
+        <div class="soft-skills">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/critical-thinking.png" alt="critical-thinking" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Critical Thinking</div>
+        </div>
+        <div class="soft-skills">
+          <img width="50" height="50"
+            src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/external-problem-solving-business-administration-wanicon-lineal-wanicon.png"
+            alt="external-problem-solving-business-administration-wanicon-lineal-wanicon" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Problem Solving</div>
+        </div>
+        <div class="soft-skills">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/creativity-and-resourcefulness.png"
+            alt="creativity-and-resourcefulness" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Creativity</div>
+        </div>
+        <div class="soft-skills">
+          <img width="50" height="50"
+            src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/64/external-growth-mindset-creative-thinking-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"
+            alt="external-growth-mindset-creative-thinking-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Growth Mindset</div>
+        </div>
+        <div class="soft-skills">
+          <img width="50" height="50" src="https://img.icons8.com/wired/64/presentation.png" alt="presentation" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Presentation</div>
+        </div>
+        <div class="soft-skills">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/teaching.png" alt="teaching" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Learning Skills</div>
+        </div>
+        <div class="soft-skills">
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/collaboration.png" alt="collaboration" style="filter: invert(1) brightness(2);"/>
+          <div class="description">Communication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <footer id="contact">
+    <p>
+      <a href="mailto:thanathon.satt@gmail.com">Thanathon.satt@gmail.com</a> |
+      <a href="">Tel +66 957124955 </a> |
+      <a href="ttps://linkedin.com/in/thanathon-satt" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+          style="position:relative; top:8px">
+          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(5.12,5.12)">
+              <path
+                d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
+              </path>
+            </g>
+          </g>
+        </svg></a> |
+      <a href="https://github.com/FloxGust" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="33" height="33" viewBox="0,0,256,256"
+          style="position:relative; top:9px">
+          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(4,4)">
+              <path
+                d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z">
+              </path>
+            </g>
+          </g>
+        </svg>
+      </a> |
+
+    <p style="margin-top: 5px;"></p>
+    </p>
+    <p style="margin-top: 20px;">&copy; 2024 Thanathon Satt</p>
+
+  </footer>
 </body>
 
 </html>
