@@ -1,3 +1,9 @@
+:root {
+  --main-color: #ffffff;
+  --white: #ffffff;
+  --black: #1a1a1a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +35,7 @@ header {
 
 header h1 {
   font-size: 24px;
-  color: #0fbd63;
+  color: var(--main-color);
 }
 
 .navbar {
@@ -80,7 +86,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #0fbd63;
+  color: var(--main-color);
 }
 
 
@@ -151,7 +157,7 @@ section h2{
   margin-left: 10px;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #020202;
+  background: var(--black);
   border: none;
   color: #ffffff;
   font-size: 18px;
@@ -159,7 +165,7 @@ section h2{
   transition: background 0.3s;
   border-radius: 3px;
   text-decoration: none;
-  border: #fff 1px solid;
+  border: var(--main-color) 1px solid;
 }
 
 .download-btn a:hover {
@@ -237,7 +243,7 @@ section h2{
 .slider {
   display: flex;
   overflow: hidden;
-  min-width: 400px;
+  min-width: 600px;
 }
 
 .slider img {
@@ -410,6 +416,21 @@ footer p a{
   text-decoration: none;
   color: #ffffff;
 }
+@media (max-width: 1330px) {
+  .project-block {
+    /* background-color: #ff175d; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px;
+  }
+  .project-card h3{
+    max-width: 600px;
+  }
+}
+
 
 @media (max-width: 768px) {
   *{
@@ -480,9 +501,9 @@ footer p a{
       bottom: 0;
       width: 300px;
       height: none;
-      min-width: 80px;
+      min-width: 100px;
       align-self:flex-start  ;
-      padding: 0% 0 0 0;
+      padding: 0 0 0 0;
       left: 0;
    
 
@@ -511,14 +532,27 @@ footer p a{
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      margin: 50px;
+      margin: 10px;
   }
   .project-card{
       width: 1800px;
       margin: 10px;
       padding: 5px;
   }
- 
+  .project-card h3{
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  .project-card div p{
+    display: flex;
+    flex-shrink: 0;
+  }
+  .slider {
+    display: flex;
+    overflow: hidden;
+    min-width: 300px;
+    justify-content: center;
+  }
   
   
 }
@@ -541,5 +575,11 @@ footer p a{
     padding: 0px 0px 0 0;
     margin: 0px 10px 0 0;
 }
-  
+.download-btn a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+  min-width: 160px;
+}
 }
