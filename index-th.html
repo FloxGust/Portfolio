@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanathon Satt - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.navbar');
+            const hamburger = document.getElementById('hamburger-menu');
+
+            // Toggle visibility of the menu
+            navLinks.classList.toggle('show');
+            hamburger.textContent = navLinks.classList.contains('show') ? '⛌' : '☰';
+
+            // Add event listener to close menu on outside click
+            document.addEventListener('click', closeMenuOnClickOutside);
+        }
+
+        function closeMenuOnClickOutside(event) {
+            const navLinks = document.querySelector('.navbar');
+            const hamburger = document.getElementById('hamburger-menu');
+
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                navLinks.classList.remove('show');
+                hamburger.textContent = '☰';
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>TS</h1>
+        <nav>
+            <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">☰</div>
+            <ul class="navbar nav-links">
+                <li><a href="#about">เกี่ยวกับฉัน</a></li>
+                <li><a href="#education">การศึกษา</a></li>
+                <li><a href="#experience">ประสบการณ์</a></li>
+                <li><a href="#skills">ทักษะ</a></li>
+                <li><a href="#contact">ช่องทางติดต่อ</a></li>
+                <!-- ปุ่มเปลี่ยนภาษา -->
+                <li>
+                    <a href="index.html" style="position:relative; top:-3px;"><img width="31" height="30"
+                            src="https://img.icons8.com/color/48/great-britain-circular.png"
+                            alt="great-britain-circular" /></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="profile">
+            <img src="src\image\image53.png" alt="Thanathon Satthayaphan">
+            <div>
+                <h2>Thanathon Satthayaphan <br>AI & Data Scientist</h2>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>
+                สวัสดีครับ ผมชื่อ ธนาทร สัตยาพันธ์ ชื่อเล่นว่าเฟียส อายุ 21 ปี
+                ปัจจุบันกำลังศึกษาในชั้นปีที่ 3 คณะวิศวกรรมศาสตร์ สาขาปัญญาประดิษฐ์และวิทยาศาสตร์ข้อมูล
+                ผมมีความสามารถในการเข้าสังคม เข้าใจผู้อื่น และทำงานร่วมกับทีมได้อย่างมีประสิทธิภาพ
+                หลงใหลในการเรียนรู้ ผมมีความเชี่ยวชาญในด้านการทำ Machine Learning
+                การวิเคราะห์ข้อมูล (Data Analytics) และการทำเหมืองข้อมูล (Data Mining)
+            </p><br>
+            <h2>การฝึกงาน</h2>
+            <p>กำลังมองหาการฝึกงานแบบสหกิจศึกษา<br>
+                เริ่มตั้งแต่วันที่ 9 มิถุนายน เป็นต้นไป ระยะเวลา 4-6 เดือน<br><br>
+            </p>
+            <p>คุณสามารถดาวน์โหลดข้อมูลได้ที่นี่!</p>
+            <div class="download-btn">
+                <a target="_blank"
+                    href="https://raw.githubusercontent.com/FloxGust/Resume/main/Thanathon-Satthayaphan-Resume.pdf">
+                    เรซูเม่ของฉัน</a>
+                <a target="_blank" href="https://raw.githubusercontent.com/FloxGust/Resume/main/Transcript.pdf">
+                    ทรานสคริปต์ของฉัน</a>
+            </div>
+    </section>
+
+
+    <section id="education" class="education">
+        <h2>การศึกษา</h2>
+
+
+
+        <div class="education-img">
+            <img src="src\image\Logo\Sarasas.jpg" alt="Bangkok University Logo">
+        </div>
+        <div class="education-container">
+            <div class="education-info">
+                <h3>Sarasas Witaed Nakhonpathom <a target="_blank"
+                        href="https://www.facebook.com/Sarasas.Nakhonpathom">Click to Visit◥</a></h3>
+                <p>2019 - 2022</p>
+            </div>
+            <div class="education-info">
+                <h4>สายวิทย์-คณิต รูปแบบสองภาษา</h4>
+                <p>มัธยมปลาย</p>
+            </div>
+            <div class="education-info">
+
+            </div>
+        </div>
+        <div class="education-img">
+            <img src="src\image\Logo\The Bournemouth.jpg" alt="Bangkok University Logo">
+        </div>
+        <div class="education-container">
+            <div class="education-info">
+                <h3>The Bournemouth School of English <a target="_blank"
+                        href="https://www.facebook.com/thebournemouthschoolofenglish">Click to Visit◥</a></h3>
+                <p>ตุลาคม 2019</p>
+            </div>
+            <div class="education-info">
+                <h4>หลักสูตรระยะสั้นสำหรับนักเรียนโรงเรียนประจำในสหราชอาณาจักร</h4>
+                <p>ศึกษาระยะสั้น</p>
+            </div>
+            <div class="education-info">
+
+            </div>
+        </div>
+        <div class="education-img">
+            <img src="src\image\Logo\BU.jpg" alt="Bangkok University Logo">
+        </div>
+        <div class="education-container">
+            <div class="education-info">
+                <h3>Bangkok University <a target="_blank" href="https://www.bu.ac.th/th">Click to Visit◥</a></h3>
+                <p>2022 - Present</p>
+            </div>
+            <div class="education-info">
+                <h4>คณะวิศวกรรมศาสตร์ — สาขาวิชาวิศวกรรมปัญญาประดิษฐ์และวิทยาการข้อมูล</h4>
+                <p>ปริญญาตรี</p>
+            </div>
+            <div class="education-info">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2>ประสบการณ์ & โปรเจกต์</h2>
+        <div class="project-container">
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src\image\Openhouse\image23.jpg" class="active">
+                        <img src="src\image\Openhouse\image54.jpg">
+                        <img src="src\image\Openhouse\image75.jpg">
+                        <img src="src\image\Openhouse\image44.jpg">
+
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>โปรเจกต์เกม "ทายว่าใคร" โดยหุ่นยนต์ AI</h3>
+                        <p>สิงหาคม 2024</p>
+                    </div>
+                    <p>ㆍผสานการทำงานของแขนหุ่นยนต์ KUKA สำหรับงาน BU Open House 2024 โดยเน้นการผสานเทคโนโลยีแขนกล KUKA
+                        เข้ากับความสามารถขั้นสูง เช่น การเก็บข้อมูล การฝึกอบรมด้วย Machine Learning
+                        การแปลงเสียงเป็นข้อความ และการตรวจจับวัตถุ
+                        ระบบนี้แสดงให้เห็นถึงการทำงานร่วมกันของหุ่นยนต์ AI และระบบอัตโนมัติ
+                        เพื่อสร้างระบบที่ชาญฉลาดและโต้ตอบได้ <br>
+                        โครงการนี้มุ่งเน้นการโต้ตอบกับผู้ใช้งานเพื่อท้าทายโมเดล AI ที่ตอบสนองทั้งเสียงและภาพ
+                        แขนกล AI
+                        จะรับคำสั่งเสียงจากผู้ใช้และหยิบกล่องวัตถุที่มีลักษณะตามคำใบ้ที่ผู้ใช้อธิบายเกี่ยวกับตัวละครนั้น
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src\image\amity\IMG_6634.JPG" class="active">
+                        <img src="src\image\amity\image.jpg">
+                        <img src="src\image\amity\IMG_6616.JPG">
+                        <img src="src\image\amity\IMG_6627.JPG">
+                        <img src="src\image\amity\IMG_6629.JPG">
+                        <img src="src\image\amity\IMG_6625.JPG">
+                        <img src="src\image\amity\IMG_6631.JPG">
+
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>การแข่งขัน Amity Hackathon 2023</h3>
+                        <p>มีนาคม 2023</p>
+                    </div>
+                    <p>ㆍทีมของเราได้เข้าสู่รอบชิงชนะเลิศของการแข่งขัน Amity Hackathon 2023
+                        โดยเราได้พัฒนาแอปพลิเคชันแชทบอทที่ใช้ ChatGPT เป็นพื้นฐาน ซึ่งรวมการออกแบบส่วนหน้า (Frontend)
+                        และฟีเจอร์ API แอปนี้มีเป้าหมายในการส่งเสริมความตระหนักด้านสิ่งแวดล้อม โดยใช้ ChatGPT และ DALL-E
+                        เพื่อโต้ตอบกับผู้ใช้ในบทสนทนาเกี่ยวกับการอนุรักษ์สิ่งแวดล้อม นอกจากนี้
+                        แอปยังมีแพลตฟอร์มชุมชนสำหรับผู้ใช้ในการโต้ตอบกัน และตลาดออนไลน์สำหรับการซื้อขายสินค้าและบริการ
+                        อีกทั้งยังมีฟีเจอร์อัปเดตสภาพอากาศแบบเรียลไทม์
+                        เพื่อช่วยให้ผู้ใช้ได้รับข้อมูลเกี่ยวกับสภาพแวดล้อมในปัจจุบัน<br>
+                        โครงการนี้มุ่งเน้นการให้ความรู้และส่งเสริมให้สังคมปฏิบัติตามแนวทางที่ยั่งยืน</p>
+                </div>
+            </div>
+
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src\image\TA\TA1.jpg" class="active">
+                        <img src="src\image\TA\TA2.jpg">
+                        <img src="src\image\TA\TA3.JPG">
+                        <img src="src\image\TA\TA4.jpg">
+                        <img src="src\image\TA\TA5.jpg">
+                        <img src="src\image\TA\TA6.jpg">
+                        <img src="src\image\TA\TA7.JPG">
+                        <img src="src\image\TA\TA8.jpg">
+                        <img src="src\image\TA\TA9.jpg">
+                        <img src="src\image\TA\TA10.jpg">
+                        <img src="src\image\TA\TA11.jpg">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>ผู้ช่วยสอน (Teaching Assistant) ในงาน BU Open House</h3>
+                        <p>ปี 2022 และ 2023</p>
+                    </div>
+                    <p><strong>Teaching Assistant ในงาน BU Open House 2023</strong> <br>
+                        สอนผู้เข้าร่วมวิธีการใช้ Tableau เพื่อวิเคราะห์ข้อมูลที่ได้รับ
+                        และสร้างแดชบอร์ดเพื่อสรุปผลของงานในแต่ละรูปแบบและปัญหา<br>
+                        Tableau เป็นเครื่องมือที่ทรงพลังสำหรับการสร้างภาพข้อมูลและการวิเคราะห์
+                        ช่วยเปลี่ยนข้อมูลดิบให้เป็นแดชบอร์ดที่โต้ตอบได้และให้ข้อมูลเชิงลึกที่มีประโยชน์ Tableau
+                        ถูกใช้อย่างแพร่หลายในอุตสาหกรรมเพื่อตรวจสอบและสรุปข้อมูลที่ซับซ้อนเพื่อช่วยในการตัดสินใจที่ดีขึ้น
+                    </p>
+                    <br>
+                    <p><strong>Teaching Assistant ในงาน BU Open House 2022</strong> <br>
+                        สอนผู้เข้าร่วมวิธีการใช้ชุดอุปกรณ์ Makey Makey ซึ่งเป็นชุดอุปกรณ์ที่ใช้งานง่าย
+                        ช่วยให้ทุกคนสามารถเปลี่ยนวัตถุในชีวิตประจำวันให้เป็นอุปกรณ์อินพุตที่ไวต่อการสัมผัส เช่น
+                        คีย์บอร์ดหรือจอยเกม เชื่อมโยงความคิดสร้างสรรค์ เทคโนโลยี
+                        และอิเล็กทรอนิกส์พื้นฐานในรูปแบบที่สนุกสนานและโต้ตอบได้<br>
+                        และให้ความรู้ในบูธเทคโนโลยี Augmented Reality (AR) สามารถนำโมเดล 3
+                        มิติมาใช้ในการสร้างสรรค์ในโลกจริงด้วย Unity ซึ่งเป็นแพลตฟอร์มการพัฒนาเกมที่ทรงพลัง
+                        ผู้เข้าร่วมจะได้เรียนรู้ว่า AR รวมเนื้อหาดิจิทัลเข้ากับโลกแห่งความจริงอย่างไร
+                        เพื่อสร้างประสบการณ์ที่น่าสนใจและโต้ตอบได้
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="project-block">
+            <div class="project-img">
+                <div class="slider">
+                    <img src="src\image\Bitcoin\1.png" class="active">
+                    <img src="src\image\Bitcoin\2.png">
+                    <img src="src\image\Bitcoin\3.png">
+                    <img src="src\image\Bitcoin\4.png">
+                    <img src="src\image\Bitcoin\5.png">
+                    <img src="src\image\Bitcoin\6.png">
+                    <img src="src\image\Bitcoin\7.png">
+                    <img src="src\image\Bitcoin\8.png">
+                    <img src="src\image\Bitcoin\9.png">
+                    <img src="src\image\Bitcoin\10.png">
+                    <img src="src\image\Bitcoin\11.png">
+                    <img src="src\image\Bitcoin\12.png">
+                    <img src="src\image\Bitcoin\13.png">
+                    <img src="src\image\Bitcoin\15.png">
+
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <div class="project-card">
+                <div>
+                    <h3>โปรเจกต์ Machine Learning: การพยากรณ์ราคาบิตคอยน์</h3>
+                    <p>พฤษภาคม 2024</p>
+                </div>
+                <p>ㆍพัฒนาโมเดล Machine Learning (Linear Regression, Random Forest, Gradient Boosting)
+                    เพื่อพยากรณ์ราคาปิดของบิตคอยน์
+                    โดยดำเนินการเตรียมข้อมูลล่วงหน้า (Preprocessing), ประเมินประสิทธิภาพ (MSE, R') และแสดงผลด้วย Python,
+                    Pandas,
+                    Scikit-learn และ Matplotlib<br><strong>ความแม่นยำของโมเดล:</strong> บรรลุความแม่นยำสูงด้วย LSTM
+                    สำหรับการพยากรณ์ระยะสั้น
+                    ในขณะที่ Random Forest
+                    มีประสิทธิภาพสูงสำหรับการพยากรณ์ระยะกลางด้วยชุดข้อมูลที่มีคุณลักษณะหลากหลาย<br><br>
+                    <strong>การแสดงผล:</strong> แสดงผลการพยากรณ์อย่างชัดเจนด้วยแนวโน้มราคาบิตคอยน์, ตัวชี้วัดทางเทคนิค
+                    และผลลัพธ์การพยากรณ์<br><br>
+                    <strong>การประยุกต์ใช้ทางธุรกิจ:</strong> ช่วยให้ผู้ค้าสามารถระบุแนวโน้มและตัดสินใจได้อย่างมีข้อมูล
+                    อีกทั้งยังสามารถปรับใช้สำหรับการพยากรณ์แบบเรียลไทม์ด้วยการปรับเปลี่ยนเพียงเล็กน้อย<br><br>
+                </p>
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src\image\RoadTrippy 2023\1.png" class="active">
+                        <img src="src\image\RoadTrippy 2023\3.png">
+                        <img src="src\image\RoadTrippy 2023\4.png">
+                        <img src="src\image\RoadTrippy 2023\5.png">
+                        <img src="src\image\RoadTrippy 2023\6.png">
+                        <img src="src\image\RoadTrippy 2023\8.png">
+
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>โปรเจกต์บัญชีทางการ LINE และแชทบอท</h3>
+                        <p>พฤศจิกายน 2023</p>
+                    </div>
+                    <p>ㆍโปรเจกต์นี้ผสานการทำงานของบัญชีทางการ LINE (LINE Official Account)
+                        เข้ากับเว็บแอปพลิเคชันสำหรับการจองการท่องเที่ยว และเชื่อมต่อกับ Chat-GPT API
+                        เพื่อให้บริการที่เกี่ยวข้องกับการท่องเที่ยวแบบโต้ตอบ
+                        ผู้ใช้สามารถเรียกดูและจองแพ็คเกจท่องเที่ยว
+                        รวมถึงสอบถามข้อมูลเกี่ยวกับการท่องเที่ยวผ่านระบบแชทบอทที่ใช้งานง่าย<br>
+                        การผสานระบบนี้สร้างแพลตฟอร์มที่ทันสมัยและเป็นมิตรกับผู้ใช้ โดยผสานการเข้าถึงการสื่อสารของ
+                        LINE เข้ากับการโต้ตอบที่ขับเคลื่อนด้วย AI และระบบจองการท่องเที่ยวที่มีประสิทธิภาพ
+                        เหมาะสำหรับนักเดินทางยุคใหม่อย่างยิ่ง!</p>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>ความสามารถและทักษะ</h2>
+        <p style="font-weight: 200; font-size:small; color:rgb(158, 158, 158); margin:5px 0">
+            คลิกที่ไอคอนเพื่อดูรายละเอียด</p>
+
+        <div class="skills-container">
+            <div class="skill-block">
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="src\image\Logo\Python-Symbol.png" alt="Python Logo">
+                    </div>
+                    <div class="back">
+                        <p>เชี่ยวชาญการใช้ไลบรารี Python เช่น Matplotlib, Pandas, OpenCV ฯลฯ
+                            พร้อมความเข้าใจในโครงสร้างข้อมูลและอัลกอริทึม</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://analyticstraininghub.com/wp-content/uploads/2020/10/icon-tableau.png"
+                            alt="Tableau Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการสร้างแดชบอร์ด, การสร้างภาพข้อมูลแบบโต้ตอบ และการใช้ Tableau
+                            ในการเล่าเรื่องและวิเคราะห์ข้อมูล</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/4/looker-tj29ynkm6d8d8ep7un7d9.png/looker-9pk6hzktapkc9fyd9b0j.png?_a=DAJFJtWIZAAC"
+                            alt="Looker Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการใช้ LookML สร้างรายงานที่ปรับแต่งเอง และการสร้างภาพข้อมูลที่ขยายขนาดได้</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://cdn.prod.website-files.com/61a1122d4f5629ccdeb44eee/624258ed4a33c9b161158aa2_Palo%20Alto%20Log.png"
+                            alt="Palo Alto Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการใช้เครื่องมือด้านความปลอดภัยของ Palo Alto เช่น การจัดการเครือข่ายไฟร์วอลล์
+                            และหลักการความปลอดภัยของคลาวด์เบื้องต้น</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://static-00.iconduck.com/assets.00/google-cloud-icon-2048x1646-7admxejz.png"
+                            alt="Google Cloud Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์กับบริการ Google Cloud เช่น Compute Engine, Cloud Storage, BigQuery
+                            และการสร้างโซลูชันคลาวด์ที่ขยายได้</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://static-00.iconduck.com/assets.00/sql-database-generic-icon-1521x2048-d0vdpxpg.png"
+                            alt="SQL Logo">
+                    </div>
+                    <div class="back">
+                        <p>เชี่ยวชาญการเขียนคำสั่ง SQL ซับซ้อนเพื่อการดึงข้อมูล การจัดการ และการปรับปรุงฐานข้อมูล
+                            พร้อมความเข้าใจเรื่อง joins, subqueries และการเพิ่มประสิทธิภาพ</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://static-00.iconduck.com/assets.00/docker-icon-2048x1753-uguk29a7.png"
+                            alt="Docker Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการสร้างและจัดการคอนเทนเนอร์ การสร้างภาพ Docker
+                            และการปรับใช้แอปพลิเคชันที่สามารถขยายได้ด้วย Docker</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPLXqRyw5PEl4ETnuzYuP5XhUI51sUdQzcg&s"
+                            alt="MySQL Logo">
+                    </div>
+                    <div class="back">
+                        <p>เชี่ยวชาญในการออกแบบ จัดการ และปรับปรุงฐานข้อมูล MySQL
+                            พร้อมความเข้าใจในแนวคิดฐานข้อมูลเชิงสัมพันธ์</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/334671144/VY/QJ/XC/59100356/download.png"
+                            alt="IBM SPSS Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการวิเคราะห์ข้อมูล การสร้างโมเดลข้อมูล และการวิเคราะห์เชิงพยากรณ์ด้วย IBM SPSS
+                            รวมถึงการประมวลผลข้อมูลจากการสำรวจ</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://blog.greggant.com/images/posts/2019-04-25-figma/Figma.png" alt="Figma Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการออกแบบส่วนติดต่อผู้ใช้ การสร้างต้นแบบ และกระบวนการทำงานร่วมกันด้าน UI/UX
+                            ด้วย Figma</p>
+                    </div>
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="HTML Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีพื้นฐานที่แข็งแกร่งใน HTML5
+                            การสร้างหน้าเว็บที่มีโครงสร้างและความหมายสำหรับการพัฒนาเว็บสมัยใหม่</p>
+                    </div>
+                </div>
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png"
+                            alt="CSS Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีความชำนาญใน CSS3 สำหรับการตกแต่งหน้าเว็บ การออกแบบที่ตอบสนอง (responsive design)
+                            การสร้างแอนิเมชัน และความเข้ากันได้กับเว็บเบราว์เซอร์ต่าง ๆ</p>
+                    </div>
+
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://wildcardcorp.com/image-repository/javascript-icon.png/@@images/image.png"
+                            alt="Javascript Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีทักษะในการใช้ไลบรารี Python เช่น Matplotlib, Pandas, OpenCV ฯลฯ
+                            พร้อมทั้งมีความเข้าใจในโครงสร้างข้อมูลและอัลกอริธึมอย่างลึกซึ้ง</p>
+                    </div>
+
+
+                </div>
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://static-00.iconduck.com/assets.00/react-original-wordmark-icon-840x1024-vhmauxp6.png"
+                            alt="React Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีทักษะในการสร้างแอปพลิเคชันแบบหน้าเดียว (Single-page applications) โดยใช้ React</p>
+                    </div>
+
+                </div>
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ-PAFsm5avHuWl8FrI_CUAQa0ikC6esaEJQ&s"
+                            alt="Rails Logo">
+                    </div>
+                    <div class="back">
+                        <p>การพัฒนาแอปพลิเคชันเว็บที่สามารถขยายขนาดได้ด้วย Ruby on Rails โดยมุ่งเน้นที่สถาปัตยกรรม MVC
+                            และ RESTful APIs</p>
+                    </div>
+
+                </div>
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="https://www.nesabamedia.com/wp-content/uploads/2021/10/FreeCAD-Logo-1.png"
+                            alt="FreeCad Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีประสบการณ์ในการสร้างโมเดล 3D และการออกแบบด้วย FreeCAD
+                            พร้อมความรู้เกี่ยวกับกระบวนการออกแบบพารามิเตอร์</p>
+                    </div>
+
+                </div>
+
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="src\image\Logo\roboflow.png" alt="Roboflow Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีทักษะในการใช้ Roboflow สำหรับกระบวนการวิจัยคอมพิวเตอร์วิชัน การเตรียมข้อมูล
+                            และการสร้างชุดข้อมูลที่พร้อมสำหรับการเรียนรู้ของเครื่อง</p>
+                    </div>
+
+                </div>
+                <div class="skill-card" onclick="toggleCard(this)">
+                    <div class="front">
+                        <img src="src\image\Logo\Adobe-Logo.png" alt="Adobe Logo">
+                    </div>
+                    <div class="back">
+                        <p>มีความชำนาญในการตัดต่อภาพ การออกแบบกราฟิก และการตัดต่อวิดีโอโดยใช้ Adobe Photoshop และ
+                            Premiere Pro</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="soft-skills">
+                <div class="soft-skills">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/critical-thinking.png"
+                        alt="critical-thinking" style="filter: invert(1) brightness(2);" />
+                    <div class="description">คิดแบบมีวิจารณญาณ</div>
+                </div>
+                <div class="soft-skills">
+                    <img width="50" height="50"
+                        src="https://img.icons8.com/external-wanicon-lineal-wanicon/64/external-problem-solving-business-administration-wanicon-lineal-wanicon.png"
+                        alt="external-problem-solving-business-administration-wanicon-lineal-wanicon"
+                        style="filter: invert(1) brightness(2);" />
+                    <div class="description">การแก้ปัญหา</div>
+                </div>
+                <div class="soft-skills">
+                    <img width="50" height="50"
+                        src="https://img.icons8.com/ios-filled/50/creativity-and-resourcefulness.png"
+                        alt="creativity-and-resourcefulness" style="filter: invert(1) brightness(2);" />
+                    <div class="description">ความคิดสร้างสรรค์</div>
+                </div>
+                <div class="soft-skills">
+                    <img width="50" height="50"
+                        src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/64/external-growth-mindset-creative-thinking-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"
+                        alt="external-growth-mindset-creative-thinking-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto"
+                        style="filter: invert(1) brightness(2);" />
+                    <div class="description">เติบโตทางความคิด</div>
+                </div>
+                <div class="soft-skills">
+                    <img width="50" height="50" src="https://img.icons8.com/wired/64/presentation.png"
+                        alt="presentation" style="filter: invert(1) brightness(2);" />
+                    <div class="description">การนำเสนอ</div>
+                </div>
+                <div class="soft-skills">
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/teaching.png" alt="teaching"
+                        style="filter: invert(1) brightness(2);" />
+                    <div class="description">ทักษะการเรียนรู้</div>
+                </div>
+                <div class="soft-skills">
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/collaboration.png"
+                        alt="collaboration" style="filter: invert(1) brightness(2);" />
+                    <div class="description">การสื่อสาร</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>
+            <a href="mailto:thanathon.satt@gmail.com">Thanathon.satt@gmail.com</a> |
+            <a href="">โทร 0957124955 </a> |
+            <a href="ttps://linkedin.com/in/thanathon-satt" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                    style="position:relative; top:8px">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <g transform="scale(5.12,5.12)">
+                            <path
+                                d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
+                            </path>
+                        </g>
+                    </g>
+                </svg></a> |
+            <a href="https://github.com/FloxGust" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="33" height="33" viewBox="0,0,256,256"
+                    style="position:relative; top:9px">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <g transform="scale(4,4)">
+                            <path
+                                d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </a> |
+        <p style="margin-top: 5px;"></p>
+        </p>
+        <p style="margin-top: 20px;">&copy; 2024 Thanathon Satt</p>
+
+    </footer>
+</body>
+
+</html>
